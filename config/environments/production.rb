@@ -109,4 +109,15 @@ Rails.application.configure do
   # config.active_record.database_selector = { delay: 2.seconds }
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_url_options = { host: 'sayitright' }
+  ActionMailer::Base.smtp_settings = {
+    :user_name => Rails.application.secrets.sendgrid[:username],
+    :password => Rails.application.secrets.sendgrid[:password],
+    :domain => 'sayitright',
+    :address => 'smtp.sendgrid.net',
+    :port => 587,
+    :authentication => :plain,
+    :enable_starttls_auto => true
+  }
 end
