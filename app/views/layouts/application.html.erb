@@ -12,10 +12,15 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <% if user_signed_in? %>
     <%= render partial: "common/header" %>
+  <% end %>
+
+  <body>
     <%= render partial: "common/flash_msg" %>
+
     <%= yield %>
+
     <%= render partial: "common/footer" %>
   </body>
 </html>

@@ -110,11 +110,11 @@ Rails.application.configure do
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_url_options = { host: 'sayitright' }
+  config.action_mailer.default_url_options = { host: 'boutique.com' }
   ActionMailer::Base.smtp_settings = {
     :user_name => Rails.application.secrets.sendgrid[:username],
     :password => Rails.application.secrets.sendgrid[:password],
-    :domain => 'sayitright',
+    :domain => 'boutique.com',
     :address => 'smtp.sendgrid.net',
     :port => 587,
     :authentication => :plain,
