@@ -16,10 +16,11 @@
     <%= render partial: "common/header" %>
   <% end %>
 
-  <body>
-    <%= render partial: "common/flash_msg" %>
-
-    <%= yield %>
+  <body class="<%= get_devise_page_class %>">
+    <div class="container">
+      <%= render partial: "common/flash_msg" %>
+      <%= yield %>
+    </div>
 
     <%= render partial: "common/footer" %>
   </body>

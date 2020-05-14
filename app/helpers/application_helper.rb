@@ -7,4 +7,8 @@ module ApplicationHelper
     when :alert then 'warning'
     end
   end
+
+  def get_devise_page_class
+    'col-md-4 offset-md-4 devise-page' if devise_controller?
+  end
 end
