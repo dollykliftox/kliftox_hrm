@@ -16,7 +16,7 @@
     <%= render partial: "common/header" %>
   <% end %>
 
-  <body class="<%= get_devise_page_class %>">
+  <body class="<%= fetch_devise_page_class %>">
     <div class="container">
       <%= render partial: "common/flash_msg" %>
       <%= yield %>

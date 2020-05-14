@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module ApplicationHelper
   def flash_class(level)
     case level
@@ -8,7 +10,7 @@ module ApplicationHelper
     end
   end
 
-  def get_devise_page_class
+  def fetch_devise_page_class
     'col-md-4 offset-md-4 devise-page' if devise_controller?
   end
 end
