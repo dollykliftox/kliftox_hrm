@@ -24,7 +24,7 @@ default: &default
 
 development:
   <<: *default
-  database: boutique_development
+  database: kliftox_hrm_development
   username: postgres
   password: 12345678
   host: localhost
@@ -43,6 +43,6 @@ development:
 
 production:
   <<: *default
-  database: boutique_production
-  username: boutique
-  password: <%= ENV['BOUTIQUE_DATABASE_PASSWORD'] %>
+  database: kliftox_hrm_production
+  username: kliftox_hrm
+  password: <%= ENV['kliftox_hrm_DATABASE_PASSWORD'] %>
