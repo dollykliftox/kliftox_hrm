@@ -53,4 +53,3 @@ gem 'rolify'
 gem 'rubocop', require: false
 gem 'sendgrid-ruby'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
-

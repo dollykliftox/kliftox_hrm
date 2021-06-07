@@ -3,10 +3,14 @@
 module ApplicationHelper
   def flash_class(level)
     case level
-    when :notice then 'info'
-    when :success then 'success'
-    when :error then 'danger'
-    when :alert then 'warning'
+    when 'notice'.to_sym
+      'info'
+    when 'success'.to_sym
+      'success'
+    when 'errors'.to_sym
+      'danger'
+    when 'alert'.to_sym
+      'warning'
     end
   end
 
